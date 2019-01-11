@@ -57,8 +57,8 @@
             //
             // Try to switch it, then go to comment identified with STEP 2
             
-            // public Because of = () => Result = Sut.MakeItAwesome(SpecifiedNonAwesomeString);
-            public Because of = () => ThrownException = Catch.Exception(() => Result =  Sut.MakeItAwesome(SpecifiedNonAwesomeString));
+            public Because of = () => Result = Sut.MakeItAwesome(SpecifiedNonAwesomeString);
+            //public Because of = () => ThrownException = Catch.Exception(() => Result =  Sut.MakeItAwesome(SpecifiedNonAwesomeString));
             public static Exception ThrownException { get; set; }
 
 
