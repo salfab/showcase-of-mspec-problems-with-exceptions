@@ -142,7 +142,7 @@
 
             // When one mock setup is missing, The implementation will throw a MockException.
             // However, this test will be red with a NullReferenceException, thrown by the assertion because Result is null.
-            // What I would expect instead is to have the runnerpointing me to the right direction, saying that a MockException was thrown.
+            // What I would expect instead is to have the runner pointing me to in right direction, saying that a MockException was thrown.
             private It should_return_string_with_length_of_26 = () => Result.Length.Should().Be(28, "If I forget a mock setup, I don't want to have a NullReferenceException, I want a MockException with the appropriate stacktrace. Also, this message will -understandably- not appear in the test runner.");
         }
     }
