@@ -138,12 +138,12 @@
             It should_call_SprinkleMoreMagic_on_InjectedDependencyToAwesomeness = () => InjectedDependencyToAwesomeness.Verify(o => o.SprinkleMoreMagic(), Times.Once);
             It should_call_AddTheFinalTouch_on_InjectedDependencyToAwesomeness = () => InjectedDependencyToAwesomeness.Verify(o => o.AddTheFinalTouch(), Times.Once);
 
-            private It should_return_string_ending_with_AWESOME = () => Result.Should().EndWith("AWESOME");
+            It should_return_string_ending_with_AWESOME = () => Result.Should().EndWith("AWESOME");
 
             // When one mock setup is missing, The implementation will throw a MockException.
             // However, this test will be red with a NullReferenceException, thrown by the assertion because Result is null.
             // What I would expect instead is to have the runner pointing me to in right direction, saying that a MockException was thrown.
-            private It should_return_string_with_length_of_26 = () => Result.Length.Should().Be(28, "If I forget a mock setup, I don't want to have a NullReferenceException, I want a MockException with the appropriate stacktrace. Also, this message will -understandably- not appear in the test runner.");
+            It should_return_string_with_length_of_26 = () => Result.Length.Should().Be(28, "If I forget a mock setup, I don't want to have a NullReferenceException, I want a MockException with the appropriate stacktrace. Also, this message will -understandably- not appear in the test runner.");
         }
     }
 }
